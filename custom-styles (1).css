@@ -1,0 +1,159 @@
+/* پایه‌ترین استایل‌ها */
+.attendance-slider,
+.attendance-stats,
+.attendance-table {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+/* استایل کارت‌های اسلایدشو */
+.swiper-slide {
+    background: #fff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+    padding: 25px !important;
+    transition: transform 0.3s ease !important;
+}
+
+.swiper-slide:hover {
+    transform: translateY(-5px) !important;
+}
+
+
+.swiper-slide.present { border-right: 5px solid #4CAF50; }
+
+/* رنگ‌بندی وضعیت حضور/غیاب */
+.swiper-slide.present .card-content {
+    border-right: 5px solid #4CAF50 !important; /* سبز */
+}
+
+.swiper-slide.absent .card-content {
+    border-right: 5px solid #F44336 !important; /* قرمز */
+}
+
+/* محتوای کارت */
+.card-content {
+    padding: 15px;
+}
+
+.card-content p {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.card-content p span {
+    font-weight: 600;
+    color: #666;
+    display: inline-block;
+    width: 80px;
+}
+
+/* پagination */
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 25px !important;
+}
+
+.swiper-pagination-bullet {
+    background: #ddd !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0073aa !important;
+    width: 30px !important;
+    border-radius: 4px !important;
+}
+
+/* استایل بخش آمار */
+.stat-box {
+    background: #f8f9fa !important;
+    border-radius: 12px !important;
+    padding: 25px !important;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 32px !important;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* استایل جدول‌ها */
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.attendance-table th {
+    background: #0073aa;
+    color: white;
+    padding: 15px;
+    text-align: right;
+}
+
+.attendance-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* رنگ‌بندی ردیف‌ها */
+tr.present td {
+    background: #E8F5E9 !important; /* سبز بسیار روشن */
+}
+
+tr.absent td {
+    background: #FFEBEE !important; /* قرمز بسیار روشن */
+}
+
+/* استایل واکنش‌گرا */
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 85% !important;
+    }
+    
+    .card-content p span {
+        width: 70px;
+        font-size: 14px;
+    }
+    
+    .stat-value {
+        font-size: 24px !important;
+    }
+}
+
+
+.swiper-slide {
+    background: #fff !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+}
+
+
+/* پایه */
+.attendance-slider { padding: 20px 0; }
+
+/* کارت‌ها */
+.swiper-slide {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin: 10px;
+    padding: 20px;
+    width: 300px !important;
+}
+
+/* رنگ‌بندی */
+.swiper-slide.present { border-left: 5px solid #4CAF50; }
+.swiper-slide.absent { border-left: 5px solid #F44336; }
+
+/* جدول‌ها */
+.attendance-table td.present { background: #E8F5E9; }
+.attendance-table td.absent { background: #FFEBEE; }
+
+/* پagination */
+.swiper-pagination { margin: 20px 0; }
+.swiper-pagination-bullet-active { background: #0073aa !important; }

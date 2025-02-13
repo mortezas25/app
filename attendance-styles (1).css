@@ -1,0 +1,328 @@
+/* پایه */
+.attendance-slider, 
+.stats-box, 
+.class-table {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+
+
+/* اسلایدشو */
+.swiper {
+    padding: 20px 0 40px !important;
+}
+
+.attendance-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    min-height: 220px;
+}
+
+.swiper-slide.present .attendance-card {
+    border-right: 5px solid #4CAF50;
+}
+
+.swiper-slide.absent .attendance-card {
+    border-right: 5px solid #F44336;
+}
+
+.attendance-card p {
+    margin: 12px 0;
+    font-size: 14px; /* کاهش از 16px */
+    line-height: 1.4; /* افزودن ارتفاع خط برای خوانایی بهتر */
+    color: #333;
+}
+
+.attendance-card span {
+    display: inline-block;
+    width: 60px; /* کاهش عرض برای هماهنگی با فونت کوچک‌تر */
+    font-size: 13px; /* افزودن اندازه فونت برای اسپن */
+    color: #666;
+    font-weight: 600;
+}
+
+/* آمار */
+.stats-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.stat-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 32px;
+    margin-top: 10px;
+    color: #0073aa;
+}
+
+.stat-item.present strong { color: #4CAF50; }
+.stat-item.absent strong { color: #F44336; }
+
+/* جدول */
+.class-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.class-table th {
+    background: #0073aa;
+    color: white;
+    padding: 15px;
+    text-align: right;
+}
+
+.class-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+tr.present { background: #E8F5E9; }
+tr.absent { background: #FFEBEE; }
+
+/* پagination */
+.swiper-pagination {
+    position: relative;
+    margin-top: 25px;
+}
+
+.swiper-pagination-bullet {
+    background: #ddd;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0073aa !important;
+    width: 30px;
+    border-radius: 4px;
+}
+
+/* واکنش‌گرا */
+@media (max-width: 768px) {
+    .attendance-card { padding: 15px; }
+    .stat-item { padding: 20px; }
+    .stat-item strong { font-size: 24px; }
+}
+
+
+
+/* استایل بخش خلاصه کلاس‌ها */
+.class-summary {
+    margin: 40px 0;
+}
+
+.class-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.class-stats {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 15px;
+}
+
+.class-stats .stat {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.class-stats .total { background: #f8f9fa; }
+.class-stats .present { background: #e8f5e9; }
+.class-stats .absent { background: #ffebee; }
+
+.class-stats strong {
+    display: block;
+    font-size: 24px;
+    margin-top: 10px;
+    color: #0073aa;
+}
+
+.class-stats .present strong { color: #4CAF50; }
+.class-stats .absent strong { color: #F44336; }
+
+/* استایل اسلایدشو خلاصه کلاس‌ها */
+.summary-slider {
+    padding: 20px 0 30px !important; /* کاهش padding عمودی */
+}
+
+.summary-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px; /* کاهش padding داخلی */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 10px;
+    min-height: 180px; /* کاهش ارتفاع */
+}
+
+.summary-card h3 {
+    font-size: 18px; /* کاهش سایز عنوان */
+    margin-bottom: 12px;
+    color: #2d3748;
+}
+
+.summary-stats {
+    display: grid;
+    gap: 12px; /* کاهش فاصله بین آیتم‌ها */
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 15px;
+}
+
+.summary-stats .stat-item {
+    text-align: center;
+    padding: 12px; /* کاهش padding داخلی */
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.summary-stats .stat-item span {
+    font-size: 14px; /* کاهش سایز متن توضیحات */
+    color: #4a5568;
+    display: block;
+}
+
+.summary-stats strong {
+    font-size: 20px !important; /* کاهش سایز اعداد */
+    margin-top: 8px;
+    color: #0073aa;
+}
+
+/* واکنش‌گرا برای موبایل */
+@media (max-width: 768px) {
+    .summary-card {
+        padding: 12px;
+        min-height: auto;
+    }
+    
+    .summary-stats {
+        grid-template-columns: 1fr; /* تک ستونه در موبایل */
+        gap: 10px;
+    }
+    
+    .summary-stats .stat-item {
+        padding: 10px;
+    }
+    
+    .summary-stats strong {
+        font-size: 18px !important;
+    }
+}
+
+
+/* آکاردئون مدرن - Material Design */
+.class-accordion {
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.accordion-item {
+    border-bottom: 1px solid #f0f4f8;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-item[open] {
+    background: #f8fafc;
+}
+
+/* هدر آکاردئون */
+.accordion-header {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+    color: #1a237e;
+    font-weight: 600;
+    font-size: 17px;
+    position: relative;
+}
+
+.accordion-header:hover {
+    background: #f5f7fa;
+}
+
+/* پیکان پویا */
+.toggle-icon {
+    width: 24px;
+    height: 24px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%236B7280"><path d="M7 10l5 5 5-5z"/></svg>');
+    transition: transform 0.3s ease;
+}
+
+.accordion-item[open] .toggle-icon {
+    transform: rotate(180deg);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233F51B5"><path d="M7 10l5 5 5-5z"/></svg>');
+}
+
+/* محتوای جدول */
+.accordion-content {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-item[open] .accordion-content {
+    max-height: 2000px;
+}
+
+/* استایل جدول */
+.accordion-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.accordion-content th {
+    background: #f8f9fa;
+    color: #37474f;
+    padding: 16px;
+    text-align: right;
+    font-weight: 500;
+    border-bottom: 2px solid #e8eaf6;
+}
+
+.accordion-content td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #eceff1;
+    color: #546e7a;
+    transition: background 0.2s ease;
+}
+
+.accordion-content tr:hover td {
+    background: #f3f5f7;
+}
+
+/* وضعیت‌های حضور/غیاب */
+.present td:first-child { border-right: 4px solid #4CAF50; }
+.absent td:first-child { border-right: 4px solid #F44336; }
+
+/* افکت باز شدن */
+@keyframes accordion-open {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.accordion-item[open] .accordion-content {
+    animation: accordion-open 0.4s ease;
+}
